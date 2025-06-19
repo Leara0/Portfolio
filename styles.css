@@ -1,0 +1,181 @@
+body {
+    background: #0c0c0d;
+    background: linear-gradient(125deg,
+            rgba(12, 12, 13, 1) 54%,
+            rgba(8, 74, 112, 1) 100%);
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Segoe UI;
+}
+
+#site-wrapper {
+    width: 90vw;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-section-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    width: 100%;
+}
+
+#projects {
+    width: 55%;
+    height: auto;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+#top-section-wrapper-right {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    width: 45%;
+}
+
+#self-image-section {
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(112, 8, 67);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#self-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+#social-buttons-section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-shadow: 2px 2px 6px rgba(206, 237, 255, 1)
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+
+}
+
+button {
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(8, 74, 112);
+    border-radius: 5px;
+    border: 1px solid rgb(10, 42, 61);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: rgb(14, 60, 87);
+}
+
+button:active {
+    background-color: rgb(10, 42, 61);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+.button-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#about {
+    width: 100%;
+    max-width: 1045px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+#cert-skill-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.box {
+    border: 2px solid rgb(112, 8, 67);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.box ul {
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+}
+
+#degrees {
+    width: 76%;
+}
+
+#skills {
+    width: 30%;
+}
