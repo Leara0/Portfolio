@@ -36,11 +36,30 @@ header {
 
 #projects {
     width: 55%;
-    height: auto;
+    height: 650px;
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 20px;
+    overflow-y: auto;
+}
+
+#projects::-webkit-scrollbar {
+    width: 10px;
+}
+
+#projects::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+#projects::-webkit-scrollbar-thumb {
+    background: rgb(112, 8, 67);
+    border-radius: 5px;
+}
+
+#projects::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 10, 90);
 }
 
 #top-section-wrapper-right {
@@ -125,7 +144,26 @@ button:hover {
 button:active {
     background-color: rgb(10, 42, 61);
 }
+.button-link{
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgb(8, 74, 112);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid rgb(10, 42, 61);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.button-link:hover{
+  background-color: rgb(14, 60, 87);
+}
 
+.button-link:active{
+  background-color: rgb(10, 42, 61);
+}
 button a {
     color: white;
     text-decoration: none;

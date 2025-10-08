@@ -1,0 +1,19 @@
+h3 {
+    text-align: center;
+}
+
+p {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.button-link{
+  margin-bottom: 20px;
+}

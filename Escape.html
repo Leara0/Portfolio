@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/EscapeStyles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Escape Project</title>
 </head>
+
 <body>
-    <article>
-                <h3>Escape | Text Adventure Game</h3>
-                <img src="images/EscapeOpening.png" alt="opening screen Escape game" width="500px">
-                <p>Description of game</p>
-                <a href="https://github.com/Leara0/CatsAndCastles1">Link to code on GitHub</a>
-                <a href="Escape.html">More about Escape</a>
-            </article>
+    <header class="box">
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class=box>
+        <h3>Escape | Text Adventure Game</h3>
+        <img src="images/EscapeOpening.png" alt="opening screen Escape game" width="500px">
+        <p>This is a console-based text adventure game where the player controls a character attempting to
+            escape a dark, multi-level castle filled with locked doors, hidden items, and guard encounters.
+            I built it in C#, using an object-oriented design to manage game state, inventory limits,
+            combat mechanics, and branching decision trees. The logic includes reusable components like
+            dynamic menus, item interaction handlers, and life/death mechanics, all organized to keep the
+            codebase maintainable as the narrative and options grow.
+        <p>
+            I focused on clean, testable architecture by separating content from logic, and I incorporated guard AI
+            behavior, inventory constraints, and exploration mechanics. The challenge was designing a scalable structure
+            for interactive storytelling while keeping performance tight and gameplay intuitive in a console
+            environment.</p>
+        </p>
+
+        <a href="https://github.com/Leara0/CatsAndCastles1" class="button-link">Link to code on GitHub</a>
+
+    </article>
+    <footer>
+            <p>&copy; 2025 Arael Seher</p>
+        </footer>
 </body>
+
 </html>
