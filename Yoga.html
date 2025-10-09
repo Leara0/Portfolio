@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/BasicStyling.css">
+  <link rel="stylesheet" href="css/Details.css">
+  <link rel="stylesheet" href="css/Yoga.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 
 <body>
-  <header class="box">
-        <nav>
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-    <article class=box>
-      <h2>Yoga Compendium | Clean Architecture Model View Controller Program</h2>
-        <img src="images/YogaCompendiumHomePage.jpg" alt="HomePage Yoga App" width="600px">
-        <p>
-            A full-stack web application built with Clean Architecture principles that demonstrates advanced C# and ASP.NET Core development. This MVC application organizes yoga poses by difficulty and category while providing comprehensive CRUD operations, intelligent search functionality, and AI-powered pose recommendations.
-        </p>
-        <h4>Technical Highlights</h4>
-        <p>The application showcases Clean Architecture implementation with distinct separation between the domain, application, infrastructure, and web layers. This modular design ensures maintainability and allows for easy swapping of components—such as changing database providers—without affecting other layers of the application.</p>
-        <p>One technical challenge I faced was implementing the many-to-many relationship between poses and categories. I solved this by first querying the junction table for all category IDs associated with each pose, then using SQL's IN operator to retrieve the corresponding category names.  I mapped these results to custom data transfer objects (PoseLinkDto) using LINQ for clean data handling throughout the application.</p>
-        <h4>Features</h4>
+  <section id="site-wrapper">
+    <header class="box">
+      <nav>
         <ul>
-          <li><strong>Dynamic Search:</strong> Searches across pose names, descriptions, benefits, and categories using SQL LIKE with wildcards for flexible text matching</li>
-          <li><strong>Full CRUD Operations:</strong> Complete create, read, update, and delete functionality with validation at both the view model and domain entity levels</li>
-          <li><string>AI Integration:</string> OpenAI-powered pose suggestion feature that accepts natural language goals and returns personalized recommendations</li>
-          <li><strong>AI Integration:</strong> OpenAI-powered pose suggestion feature that accepts natural language goals and returns personalized recommendations</li>
-          <li><strong>Responsive UI:</strong> Card-based interface with clickable elements throughout for intuitive navigation</li>
+          <li><a href="Index.html">Home</a></li>
         </ul>
-        <p>The project includes comprehensive unit tests covering domain logic, use cases, and controllers, utilizing mocking for repositories and services to ensure reliable, testable code.</p>
-        <p><strong>Technologies:</strong> C#, ASP.NET Core MVC, Dapper, SQL Server, OpenAI API, Clean Architecture</p>
-
-        
-    </article>
-    <footer>
-        <p>&copy; 2025 Arael Seher</p>
-    </footer>
+      </nav>
+    </header>
+    <section class=box>
+      <h2>Yoga Compendium | Clean Architecture Model View Controller Program</h2>
+      <p>
+        A full-stack web application built with Clean Architecture principles that demonstrates advanced C# and ASP.NET
+        Core development. This MVC application organizes yoga poses by difficulty and category while providing
+        comprehensive CRUD operations, intelligent search functionality, and AI-powered pose recommendations.
+      </p>
+      <section class="button-section" id="space-below-buttons">
+        <button>
+          <a href="https://drive.google.com/file/d/1ZieTeq6TWqIEZgm4qeLaNLEw6wHij5Pr/view?usp=drive_link">Video Walkthrough</a>
+        </button>
+        <button>
+          <a href="https://drive.google.com/file/d/19Wm7pRb9syiUpQ6KkC9WZkmVr6FSrY1j/view?usp=drive_link">Short Video Demonstration</a>
+        </button>
+      </section>
+      <img src="images/YogaCompendiumHomePage.jpg" alt="HomePage Yoga App" width="600px">
+      
+      <h4>Technical Highlights</h4>
+      <p>
+        The application showcases Clean Architecture implementation with distinct separation between the domain, application, infrastructure, and web layers. This modular design ensures maintainability and allows for easy swapping of components—such as changing database providers—without affecting other layers of the application.
+      </p>
+      <p>
+        One technical challenge I faced was implementing the many-to-many relationship between poses and categories. I solved this by first querying the junction table for all category IDs associated with each pose, then using SQL's IN operator to retrieve the corresponding category names. I mapped these results to custom data transfer objects (PoseLinkDto) using LINQ for clean data handling throughout the application.</p>
+      <h4>Features</h4>
+      <ul>
+        <li><strong>Dynamic Search:</strong> Searches across pose names, descriptions, benefits, and categories using SQL LIKE with wildcards for flexible text matching</li>
+        <li><strong>Full CRUD Operations:</strong> Complete create, read, update, and delete functionality with
+          validation at both the view model and domain entity levels</li>
+        <li>
+          <string>AI Integration:</string> OpenAI-powered pose suggestion feature that accepts natural language goals and returns personalized recommendations
+        </li>
+        <li><strong>AI Integration:</strong> OpenAI-powered pose suggestion feature that accepts natural language goals and returns personalized recommendations</li>
+        <li><strong>Responsive UI:</strong> Card-based interface with clickable elements throughout for intuitive navigation</li>
+      </ul>
+      <p>
+        The project includes comprehensive unit tests covering domain logic, use cases, and controllers, utilizing mocking for repositories and services to ensure reliable, testable code.</p>
+      <p>
+        <strong>Technologies:</strong> C#, ASP.NET Core MVC, Dapper, SQL Server, OpenAI API, Clean Architecture</p>
+    </section>
+  </section>
+  <footer>
+    <p>&copy; 2025 Arael Seher</p>
+  </footer>
 </body>
+
 </html>

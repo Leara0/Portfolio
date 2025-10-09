@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <link rel="stylesheet" href="css/BasicStyling.css">
+  <link rel="stylesheet" href="css/Details.css">
+  <link rel="stylesheet" href="">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  
+  <section id="site-wrapper">
+    <header class="box">
+      <nav>
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class=box>
+      <h2>Taco Parser | CSV Parsing and Geolocation TDD Project</h2>
+      <p>
+        A test-driven C# project focused on parsing location data from a CSV file, calculating distances between geolocations, and integrating structured logging for observability and debugging
+      </p>
+      <section class="button-section" id="space-below-buttons">
+        <button>
+          <a href="">Video
+            Walkthrough</a>
+        </button>
+      </section>
+      <img src="images/TacoParser.jpg" alt="Image of Taco Parser output" width="600px">
+      
+      <h4>Technical Highlights</h4>
+      <p>
+        The project demonstrates test-driven development with xUnit, writing tests first to validate parsing accuracy before implementing functionality. The TacoParser class processes CSV data line-by-line, splitting on commas and extracting location names and geographic coordinates into strongly-typed data structures. 
+      </p>
+      <h4>Features</h4>
+      <ul>
+        <li><strong>CSV Parsing:</strong> Robust string manipulation to extract structured data from comma-separated values</li>
+        <li><strong>Geospatial Calculations:</strong> Integration with GeoCoordinate.Core NuGet package to calculate real-world distances in meters between coordinate pairs</li>
+        <li><strong>Distance Algorithm:</strong> Nested loop implementation that systematically compares all location pairs to identify the two furthest points in the dataset</li>
+        <li><strong>Comprehensive Testing:</strong> xUnit test suite covering parse validation, null checks, and coordinate accuracy with mock data</li>
+      </ul>
+      <p>The algorithm uses nested loops to iterate through every possible location pair, creating Coordinate objects from the parsed data and leveraging the GetDistanceTo method to compute distances. An if-block tracks the maximum distance found, updating the stored locations and distance as it discovers larger separations.</p>
+      <p><strong>Technologies:</strong> C#, xUnit, GeoCoordinate.Core, LINQ, structured logging</p>
+
 </body>
+
 </html>

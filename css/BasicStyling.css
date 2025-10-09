@@ -1,0 +1,105 @@
+body {
+    background: #0c0c0d;
+    background: linear-gradient(125deg,
+            rgba(12, 12, 13, 1) 54%,
+            rgba(8, 74, 112, 1) 100%);
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Segoe UI;
+}
+
+#site-wrapper {
+    width: 90vw;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-shadow: 2px 2px 6px rgba(206, 237, 255, 1)
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+button {
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(8, 74, 112);
+    border-radius: 5px;
+    border: 1px solid rgb(10, 42, 61);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: rgb(14, 60, 87);
+}
+
+button:active {
+    background-color: rgb(10, 42, 61);
+}
+.button-link{
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgb(8, 74, 112);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid rgb(10, 42, 61);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.button-link:hover{
+  background-color: rgb(14, 60, 87);
+}
+
+.button-link:active{
+  background-color: rgb(10, 42, 61);
+}
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+.box {
+    border: 2px solid rgb(112, 8, 67);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+#space-below-buttons{
+  margin-bottom: 20px;
+}
