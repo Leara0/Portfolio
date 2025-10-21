@@ -3,38 +3,46 @@
 
 <head>
     <link rel="stylesheet" href="css/SnakeStyles.css">
-    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="css/BasicStyling.css">
+    <link rel="stylesheet" href="css/Details.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Project</title>
 </head>
 
 <body>
-    <header class="box">
-        <nav>
+    <section id="site-wrapper">
+        <header class="box">
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class=box>
+            <h3>Snake | Real-time, grid-based game</h3>
+            <p>
+                A classic Snake game implementation built entirely in the C# console, demonstrating real-time input handling, collision detection, and dynamic game state management. The game features smooth snake movement, progressive difficulty scaling, and responsive controls for an engaging retro gaming experience.</p>
+            <section>
+                <img src="images/Snake.jpg" alt="Opening screen Snake game" width="300px">
+                <img src="images/SnakePlaying.jpg" alt="Playing snake game" width="300px">
+            </section>
+            <h4>Technical Highlights</h4>
+            <p>The application uses multithreading to handle simultaneous game rendering and user input. A background thread continuously listens for arrow key presses while the main thread manages the game loop, updating the snake's position, checking collisions, and rendering frames at calculated intervals.</p>
+            <p>One technical challenge I solved was creating responsive yet controlled input handling. The game needed to register direction changes immediately without allowing multiple inputs during a single move, which could cause the snake to reverse into itself. I implemented a two-stage direction system with a NextDirection buffer that queues player input and applies it at the start of each game loop iteration, combined with an IsOpposite validation method to reject illegal reversals.</p>
+            <h4>Features</h4>
             <ul>
-                <li><a href="Index.html">Home</a></li>
+                <li><strong>Multithreaded Input Handling:</strong> Background thread for continuous key listening while the main thread runs the game loop without blocking</li>
+                <li><strong>Collision Detection:</strong> Boundary checking to detect when the snake hits walls and self-collision detection to end the game when the snake intersects its own body</li>
+                <li><strong>Dynamic Difficulty:</strong> Speed modulation that increases based on score, with different sleep intervals for horizontal versus vertical movement to account for console character aspect
+                    ratios</li>
+                <li><strong>Polished UI:</strong> Unicode box-drawing characters for clean borders, centered text formatting, alternating colored snake segments, and adaptive screen size validation</li>
             </ul>
-        </nav>
-    </header>
-    <article class=box>
-        <h3>Snake | Real-time, grid-based game</h3>
-        <img src="images/Snake.png" alt="Opening screen Snake game" width="300px">
-        <p>
-            This Snake game showcases my ability to build an interactive console application using C#. The project
-            demonstrates core programming skills such as managing game loops, handling real-time user input, updating
-            the UI using console positioning, and implementing object-oriented logic for movement and game state. I
-            structured the code to keep the game responsive, with direction changes registering between timed movements,
-            and included screen-size detection to ensure the game adapts to different terminal dimensions.
-        </p>
-        <p>
-            I also implemented precise collision detection, dynamic growth of the snake, and consistent input handling
-            to avoid unwanted moves. The project highlights my comfort with C# features like lists, tuples, and
-            conditional logic, and reflects a focus on clean, readable code that balances simplicity with a smooth user
-            experience.
-        </p>
-        <a href="https://github.com/Leara0/Snake" class="button-link">Link to code on GitHub</a>
-    </article>
+            <p>The game maintains state through a static Game class that stores snake coordinates as a list of tuples, current direction using an enum, score, and apple position. The snake grows by adding segments to the coordinate list when consuming apples, and movement is achieved by adding a new head position while removing the tail (unless growing).</p>
+            <p><strong>Technologies:</strong> C#, Console API, Multithreading, Tuples, Enums, Unicode</p>
+            <a href="https://github.com/Leara0/Snake" class="button-link">Link to code on GitHub</a>
+        </section>
+    </section>
     <footer>
         <p>&copy; 2025 Arael Seher</p>
     </footer>
