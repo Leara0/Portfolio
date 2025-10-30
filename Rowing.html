@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowing</title>
+    <link rel="stylesheet" href="css/BasicStyling.css">
+    <link rel="stylesheet" href="css/Details.css">
+</head>
+<body>
+      <section id="site-wrapper">
+    <header class="box">
+      <nav>
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class=box>
+      <h2>Rowing API | Clean Architecture RESTful Web Service</h2>
+      <p>
+        A RESTful API built with Clean Architecture principles that provides rowing technique education resources 
+        for coaches and athletes. The API serves as a comprehensive reference system covering stroke phases, 
+        common errors, injury prevention strategies, and training drills.
+      </p>
+      <section class="button-section" id="space-below-buttons">
+        <button>
+          <a href="">Technical Walkthrough</a>
+        </button>
+        <button>
+          <a href="">Feature Demonstration</a>
+        </button>
+        <button>
+            <a href="https://rowing-api-aseher.azurewebsites.net/swagger/index.html">Live Deployment</a>
+        </button>
+      </section>
+      <img src="" alt="Swagger Rowing Api demo image" width="600px">
+      
+      
+      <h4>Technical Highlights</h4>
+      <p>
+        The application demonstrates Clean Architecture with strict layer separation: the Domain layer 
+        contains entities with encapsulated business logic, the Application layer handles DTOs and orchestrates 
+        operations through CQRS-style command and query services, the Infrastructure layer manages 
+        database access with Dapper, and the API layer exposes RESTful endpoints with proper HTTP semantics.
+      </p>
+      <p>
+        One technical challenge I faced was designing type-safe enum integration across layers. The stroke 
+        phases and injury body areas needed to be stored as foreign keys in the database while providing 
+        dropdown options for frontend consumers. I solved this by creating wrapper DTOs that contain 
+        both the selected enum value and a list of available options. The query services join the related 
+        tables to retrieve display names, then parse them back to enums, while the command services convert 
+        the enums to integer foreign keys before database operations.
+      </p>
+      <h4>Features</h4>
+      <ul>
+        <li>
+          <strong>CRUD Operations:</strong> Full create, read, update, and delete functionality for common 
+          errors, injury prevention, and technique drills with Data Annotation and domain-level validation. 
+          Stroke phases support read and update operations only, preventing creation or deletion to 
+          maintain the integrity of the four fundamental rowing phases.
+        </li>
+        <li>
+          <strong>Relational Data Model:</strong> Foreign key relationships linking common errors to 
+          stroke phases and injury prevention records, enforcing referential integrity
+        </li>
+        <li>
+          <strong>Type-Safe Enums:</strong> Enum-based domain modeling for stroke phases and injury 
+          body areas, providing compile-time safety and clear frontend integration contracts
+        </li>
+        <li>
+          <strong>Comprehensive Error Handling:</strong> Custom exceptions with proper HTTP status 
+          codes and logging throughout the application layers
+        </li>
+      </ul>
+      <p>
+        The project demonstrates production-ready practices including proper dependency injection, 
+        async/await throughout for optimal performance, and comprehensive logging with custom exception 
+        handling to ensure reliable API operations.</p>
+      <p>
+        <strong>Technologies:</strong> C#, ASP.NET Core Web API, Dapper, SQL Server, Clean Architecture, Azure App Service</p>
+    </section>
+  </section>
+</body>
+</html>
