@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatchPoint</title>
+    <link rel="stylesheet" href="css/BasicStyling.css">
+    <link rel="stylesheet" href="css/Details.css">
+</head>
+<body>
+    <section id="site-wrapper">
+        <header class="box">
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="box">
+            <h2>CatchPoint | Full-Stack Blazor WebAssembly Injury Prevention Platform</h2>
+            <p>
+                A comprehensive rowing injury prevention application built with Blazor WebAssembly and .NET API. 
+                This full-stack platform features interactive visualizations, real-time search capabilities, and 
+                educational resources designed to help rowers understand injury prevention and proper technique.
+            </p>
+            <section class="button-section" id="space-below-buttons">
+                <button>
+                    <a href="https://gentle-river-049749c1e.1.azurestaticapps.net">Live Deployment</a>
+                </button>
+            </section>
+            <img src="images/CatchPoint.jpg" alt="CatchPoint Application Screenshot" width="600px">
+            
+            <h4>Technical Highlights</h4>
+            <p>
+                The application demonstrates modern full-stack development with Blazor WebAssembly for the frontend 
+                and ASP.NET Core API for the backend. The frontend utilizes component-based architecture with 
+                scoped CSS, state management for real-time interactions, and debounced HTTP calls for optimal 
+                performance. The backend follows Clean Architecture principles with the same domain-driven design 
+                used in the original Rowing API.
+            </p>
+            <p>
+                A significant technical challenge was implementing real-time search with proper debouncing across 
+                multiple data sources. I solved this by creating a unified search interface that simultaneously 
+                queries both exercise and drill endpoints, using a 300ms timer that cancels previous requests when 
+                users continue typing. This provides instant feedback while preventing excessive API calls and 
+                maintaining smooth user experience.
+            </p>
+            
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    <strong>Interactive Body Map:</strong> Click-based hotspot visualization showing common injury 
+                    areas with detailed prevention strategies, strengthening exercises, and critical stroke phase 
+                    information
+                </li>
+                <li>
+                    <strong>Real-Time Search:</strong> Debounced search functionality across training exercises 
+                    and technique drills with field-specific filtering and enum-based API design
+                </li>
+                <li>
+                    <strong>Stroke Phase Visualization:</strong> Interactive circular interface displaying the 
+                    four rowing phases with detailed modal popups containing technique guidance and imagery
+                </li>
+                <li>
+                    <strong>Training Library:</strong> Comprehensive exercise and drill database with modal-based 
+                    detailed views, text truncation, and responsive card layouts
+                </li>
+            </ul>
+            <p>
+                The project showcases modern deployment practices using Azure Static Web Apps with automated CI/CD 
+                from GitHub, CORS configuration for cross-origin requests, and proper environment-based configuration 
+                management for seamless local development and production deployment.
+            </p>
+            <p>
+                <strong>Technologies:</strong> Blazor WebAssembly, ASP.NET Core API, C#, Azure Static Web Apps, 
+                Dapper ORM, SQL Server, GitHub Actions CI/CD
+            </p>
+        </section>
+    </section>
+    <footer>
+        <p>&copy; 2025 Arael Seher</p>
+    </footer>
+</body>
+</html>
